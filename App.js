@@ -3,10 +3,11 @@ import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 export default function App() {
-  let x = 1;
+  const handleOnPress = () => console.log("Text Clicked"); 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Test 2
+      <Text numberOfLines={10} onPress={handleOnPress}>
+        Big test for long text really long text going ham bruh let's doo this.
       </Text>
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -16,7 +17,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'dodgerblue',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },

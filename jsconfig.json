@@ -1,0 +1,4 @@
+{
+  // included since developed in JS + auto import
+  "exclude": ["node_modules"]
+}

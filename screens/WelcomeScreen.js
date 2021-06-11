@@ -16,6 +16,7 @@ export default function WelcomeScreen() {
         style={{
           height: "100%",
           width: "100%",
+          position: "absolute"
         }}/>
       <View 
         style={[
@@ -37,13 +38,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    flexDirection: "column",
-    alignItems: "flex-end",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignContent: "flex-end",
     flexWrap: "wrap"
   },
   placeHolder: {
     width: "100%",
-    height: 100,
-    position: "absolute"
+    height: 75,
+    position: "relative"
   }
 });

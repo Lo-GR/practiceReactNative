@@ -19,11 +19,11 @@ export default function App() {
     Alert.prompt("title", "message", text => console.log(text))
   }
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, styles.containerStyle]}>
       <Button 
         title="click Me" 
         onPress={handleOnPressB}
-        color="orange"/>
+        color="lightblue"/>
       <Text numberOfLines={10} onPress={handleOnPress}>
         Big test for long text really long text going ham bruh let's doo this.
       </Text>
@@ -45,5 +45,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  containerStyle: {
+    backgroundColor: 'orange',
   },
 });

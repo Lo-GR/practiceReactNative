@@ -11,24 +11,14 @@ export default function App() {
     <View style={styles.container}>
       <View 
         style={{
-          backgroundColor: "dodgerblue",
-          width: 100,
-          height: 100
-        }}
-      />
-      <View 
-        style={{
-          backgroundColor: "gold",
+          backgroundColor: "#fc5c65",
           width: 100,
           height: 100,
-          top: 20,
-          left: 20,
-          position: "absolute" //relative is relative to child comps, absolute is to parent, react native is default relative
         }}
       />
       <View 
         style={{
-          backgroundColor: "tomato",
+          backgroundColor: "#4ECDC4",
           width: 100,
           height: 100
         }}

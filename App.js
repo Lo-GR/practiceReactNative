@@ -1,39 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { 
-  Dimensions,
   StyleSheet, 
-  Text, 
-  View, 
-  Alert, 
-  Platform, 
-  TouchableWithoutFeedback, 
-  TouchableHighlight, 
-  TouchableOpacity, 
-  Image, 
-  SafeAreaView, 
-  Button } from 'react-native';
+  View, } from 'react-native';
+
 
 export default function App() {
-  console.log(Dimensions.get("screen"))
+
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar style="auto" />
-      <View style={{
-        backgroundColor: 'dodgerblue',
-        width: '100%',
-        height: "30%"
-      }}></View>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <View 
+        style={{
+          backgroundColor: "dodgerblue",
+          flex: 1,
+        }}
+      />
+      <View 
+        style={{
+          backgroundColor: "gold",
+          flex: 1,
+        }}
+      />
+      <View 
+        style={{
+          backgroundColor: "tomato",
+          flex: 1,
+        }}
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    backgroundColor: '#fff',
   }
 });

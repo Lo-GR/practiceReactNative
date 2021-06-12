@@ -1,12 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { 
-  StyleSheet, 
-  View, 
-  ImageBackground,
-  Image, 
-  Text} from 'react-native';
+import { StyleSheet, View, ImageBackground,Image, Text} from 'react-native';
 
+import colors from "../config/colors";
 
 export default function WelcomeScreen() {
 
@@ -25,13 +21,13 @@ export default function WelcomeScreen() {
       <View 
         style={[
           styles.loginButton, {
-          backgroundColor: "#fc5c65",
+          backgroundColor: colors.primary,
         }]}
       />
       <View 
         style={[
           styles.registerButton, {
-          backgroundColor: "#4ECDC4",
+          backgroundColor: colors.secondary,
         }]}
       />
     </ImageBackground>

@@ -8,16 +8,14 @@ import {
 export default function ViewImageScreen() {
   return(
     <View style={styles.container}>
-      <View style={styles.placeHolderContainer}>
-        <View 
-          style={[
-            styles.placeHolder, 
-            {backgroundColor: "green" }]} />
-        <View 
-          style={[
-            styles.placeHolder, 
-            {backgroundColor: "green" }]} />
-      </View>
+      <View 
+        style={[
+          styles.closeIcon, 
+          {backgroundColor: "#fc5c65" }]} />
+      <View 
+        style={[
+          styles.deleteIcon, 
+          {backgroundColor: "#4ecdc4" }]} />
       <Image 
         source={require("../assets/chair.jpg")} 
         resizeMode={"contain"} 
@@ -32,16 +30,19 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     justifyContent: "center",
   },
-  placeHolderContainer: {
-    justifyContent: "space-between",
-    flexDirection: "row",
-    position: "absolute",
-    top: 40,
-    width: "100%"
-  },
-  placeHolder: {
+  closeIcon: {
     height: 50,
     width: 50,
+    position: "absolute",
+    top: 40,
+    left: 30
+  },
+  deleteIcon: {
+    height: 50,
+    width: 50,
+    position: "absolute",
+    top: 40,
+    right: 30
   },
   image: {
     width: "100%",

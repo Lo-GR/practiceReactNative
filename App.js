@@ -1,15 +1,14 @@
-// import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-// import { 
-//   StyleSheet, 
-//   View, 
-//   Image,} from 'react-native';
+import { View } from 'react-native';
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 
 export default function App() {
   return (
-    <ViewImageScreen />
+      <ViewImageScreen>
+        <StatusBar hidden={"true"} />
+      </ViewImageScreen>
   );
 }

@@ -20,12 +20,8 @@ export default function ViewImageScreen() {
       </View>
       <Image 
         source={require("../assets/chair.jpg")} 
-        resizeMode={"cover"} 
-        style={{
-          height: "70%",
-          width: "100%",
-          position: "absolute"
-        }}/>
+        resizeMode={"contain"} 
+        style={styles.image}/>
     </View>
   );
 }
@@ -47,4 +43,8 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
   },
+  image: {
+    width: "100%",
+    height: "100%"
+  }
 });

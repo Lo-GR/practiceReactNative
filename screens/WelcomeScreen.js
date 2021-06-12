@@ -3,7 +3,8 @@ import React from 'react';
 import { 
   StyleSheet, 
   View, 
-  Image,} from 'react-native';
+  Image,
+  Text} from 'react-native';
 
 
 export default function WelcomeScreen() {
@@ -18,6 +19,16 @@ export default function WelcomeScreen() {
           width: "100%",
           position: "absolute"
         }}/>
+        <View style={styles.logoContainer}>
+          <Image
+            source={require("../assets/logo-red.png")}
+            style={{
+              height: 100,
+            }}
+            resizeMode={"contain"}
+          />
+          <Text>Sell What You Don't Need</Text>
+        </View>
       <View 
         style={[
           styles.placeHolder, {
@@ -47,5 +58,11 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 75,
     position: "relative"
+  },
+  logoContainer: {
+    position: "absolute",
+    flexDirection: 'column',
+    alignItems: "center",
+    top: "15%",
   }
 });

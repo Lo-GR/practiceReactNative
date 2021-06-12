@@ -26,13 +26,13 @@ export default function WelcomeScreen() {
       </View>
       <View 
         style={[
-          styles.placeHolder, {
+          styles.loginButton, {
           backgroundColor: "#fc5c65",
         }]}
       />
       <View 
         style={[
-          styles.placeHolder, {
+          styles.registerButton, {
           backgroundColor: "#4ECDC4",
         }]}
       />
@@ -41,22 +41,23 @@ export default function WelcomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  placeHolder: {
+  loginButton: {
     width: "100%",
-    height: 75,
-    position: "relative"
+    height: 70,
+  },
+  registerButton: {
+    width: "100%",
+    height: 70,
   },
   logoContainer: {
     position: "absolute",
     flexDirection: 'column',
     alignItems: "center",
     top: "15%",
+    alignSelf: "center",
   },
   background: {
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignContent: "flex-end",
-    flexWrap: "wrap"
+    justifyContent: "flex-end",
   }
 });

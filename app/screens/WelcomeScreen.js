@@ -3,32 +3,27 @@ import React from 'react';
 import { 
   StyleSheet, 
   View, 
-  Image,
+  ImageBackground,
+  Image, 
   Text} from 'react-native';
 
 
 export default function WelcomeScreen() {
 
   return (
-    <View style={styles.container}>
-      <Image 
-        source={require("../assets/background.jpg")} 
-        resizeMode={"cover"} 
-        style={{
-          height: "100%",
-          width: "100%",
-          position: "absolute"
-        }}/>
-        <View style={styles.logoContainer}>
-          <Image
-            source={require("../assets/logo-red.png")}
-            style={{
-              height: 100,
-            }}
-            resizeMode={"contain"}
-          />
-          <Text>Sell What You Don't Need</Text>
-        </View>
+    <ImageBackground
+      source={require("../assets/background.jpg")} 
+      style={styles.background}>
+      <View style={styles.logoContainer}>
+        <Image
+          source={require("../assets/logo-red.png")}
+          style={{
+            height: 100,
+          }}
+          resizeMode={"contain"}
+        />
+        <Text>Sell What You Don't Need</Text>
+      </View>
       <View 
         style={[
           styles.placeHolder, {
@@ -41,19 +36,11 @@ export default function WelcomeScreen() {
           backgroundColor: "#4ECDC4",
         }]}
       />
-    </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    flexDirection: "row",
-    justifyContent: "center",
-    alignContent: "flex-end",
-    flexWrap: "wrap"
-  },
   placeHolder: {
     width: "100%",
     height: 75,
@@ -64,5 +51,12 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: "center",
     top: "15%",
+  },
+  background: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignContent: "flex-end",
+    flexWrap: "wrap"
   }
 });

@@ -37,10 +37,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   placeHolderContainer: {
-    alignContent: "space-between",
+    justifyContent: "space-between",
     flexDirection: "row",
     position: "absolute",
     top: 40,
+    width: "100%"
   },
   placeHolder: {
     height: 50,
